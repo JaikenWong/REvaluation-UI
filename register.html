@@ -31,17 +31,17 @@
 						<div class="card">
 							<div class="card-body">
 								<h4 class="card-title">Create new account</h4>
-								<form action="/public/ui/api/login" name="registerForm" method="post" onsubmit="return checkRegister(this.form)">
+								<form id="registerForm" onsubmit="return false" action="#">
 			
 									<div class="form-group">
 										<label for="userName">Name</label>
 										<input type="text" class="form-control" id="userName" name="userName" required="" autofocus="">
 									</div>
 
-									<div class="form-group">
-										<label for="email">E-Mail Address</label>
-										<input id="email" type="email" class="form-control" name="email" required="">
-									</div>
+<!--									<div class="form-group">-->
+<!--										<label for="email">E-Mail Address</label>-->
+<!--										<input id="email" type="email" class="form-control" name="email" required="">-->
+<!--									</div>-->
 
 									<div class="form-row">
 										<div class="form-group col-md-6">
@@ -58,7 +58,8 @@
 
 
 									<div class="form-group no-margin">
-										<input class="btn btn-primary btn-block" type="submit" value="Sign Up">
+										<input class="btn btn-primary btn-block" type="button" onclick="submitRegisterForm(event)"
+											   value="Sign Up">
 									</div>
 									<div class="text-center mt-3 small">
 										Already have an account? <a href="login.html">Sign In</a>
